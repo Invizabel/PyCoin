@@ -16,7 +16,6 @@ def pycoin(email):
         result = sha256(str(block).encode("ascii")).hexdigest()
 
         if "00000000" in result:
-            os.system("clear")
             blocks_mined += 1
             parameters = {"email": str(email), "block": str(block)}
             my_request = requests.get("http://localhost:5000/index", params = parameters)

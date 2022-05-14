@@ -17,7 +17,7 @@ def pycoin(email):
         if "0000000000000000" in result:
             os.system("clear")
             blocks_mined += 1
-            print("blocks mined: " + blocks_mined)
+            print("blocks mined: " + str(blocks_mined))
 
 email = input("Enter email: ")
 os.system("clear")

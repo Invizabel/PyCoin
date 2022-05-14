@@ -1,6 +1,5 @@
 from hashlib import sha256
 
-
 def pycoin(email):
     block = 0
     email = sha256(email.encode("ascii")).hexdigest()

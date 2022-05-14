@@ -15,6 +15,7 @@ def pycoin(email):
         result = sha256(str(block).encode("ascii")).hexdigest()
 
         if "0000000000000000" in result:
+            os.system("clear")
             blocks_mined += 1
             print("blocks mined: " + blocks_mined)
 

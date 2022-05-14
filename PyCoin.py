@@ -1,4 +1,5 @@
 from hashlib import sha256
+import os
 
 os.system("clear")
 

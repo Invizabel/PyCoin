@@ -1,5 +1,6 @@
 from hashlib import sha256
 import os
+import requests
 
 os.system("clear")
 
@@ -14,10 +15,12 @@ def pycoin(email):
         block += 1
         result = sha256(str(block).encode("ascii")).hexdigest()
 
-        if "0000000000000000" in result:
+        if "00000000" in result:
             os.system("clear")
             blocks_mined += 1
-            print("blocks mined: " + str(blocks_mined))
+            parameters = {"email": str(email), "block": str(block)}
+            my_request = requests.get("http://localhost:5000/index", params = parameters)
+            print(my_request.text)
 
 email = input("Enter email: ")
 os.system("clear")
